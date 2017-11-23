@@ -386,7 +386,7 @@ ul.dropdown-menu {
 	background: #fff;
     border: 1px solid #D9E9ED;
     color: #212121;
-    background-image: url(../images/icon.png);
+    background-image: url(../img/icon.png);
     background-position: center right 10px;
     background-repeat: no-repeat;
     border-radius: 0;
@@ -663,11 +663,11 @@ p.text {
 /*-- //special --*/
 /*-- choose --*/
 .choose{
-	background:url(../images/5.jpg) no-repeat 0px 0px;
+	background:url(../img/5.jpg) no-repeat 0px 0px;
 	background-size:cover;
 }
 .w3-agile-testimonial {
-    background: url(../images/dott.png)repeat 0px 0px;
+    background: url(../img/dott.png)repeat 0px 0px;
     background-size: 2px;
     -webkit-background-size: 2px;
     -moz-background-size: 2px;
@@ -807,7 +807,7 @@ i.fa.fa-quote-right {
     text-decoration: none;
     width: 40px;
     height: 40px;
-    background: transparent url("../images/arrows.png") no-repeat right top;
+    background: transparent url("../img/arrows.png") no-repeat right top;
 }
 .callbacks_nav.next {
     left: auto;
@@ -1037,7 +1037,7 @@ button.btn1:hover{
 /*-- //footer --*/
 /*-- about-heading --*/
 .about-heading{
-	background:url(../images/3.jpg) no-repeat 0px 0px;
+	background:url(../img/3.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	padding:2em 0;
 	text-align:center;
@@ -1085,7 +1085,7 @@ button.btn1:hover{
 /*-- //about-top --*/
 /*-- choose --*/
 .w3-agileits-choose-grid{
-    background: url(../images/ab.jpg) no-repeat 0px 0px;
+    background: url(../img/ab.jpg) no-repeat 0px 0px;
     background-size: cover;	
 }
 .agile-choose-grids{
@@ -2360,7 +2360,7 @@ i.fa.fa-pencil{
 }
 .categories ul li {
     display: block;
-    background: url(../images/arrow1.png) no-repeat 0px 2px;
+    background: url(../img/arrow1.png) no-repeat 0px 2px;
     margin-bottom: 1em;
 }
 .categories ul li a {
@@ -2631,7 +2631,7 @@ i.fa.fa-pencil{
 	height: 40px;
 	border: none;
 	text-indent: 100%;
-	background: url(../images/arrow.png) no-repeat 0px 0px;
+	background: url(../img/arrow.png) no-repeat 0px 0px;
 }
 #toTopHover {
 	width: 40px;
