@@ -2691,6 +2691,7 @@ i.fa.fa-pencil{
 	.agile-footer-grid h4, .agile-footer-grid p {
 		text-align: center;
 	}
+}
 @media(max-width:991px){
 	.navbar-nav > li > a {
 		padding: 35px 19px;
