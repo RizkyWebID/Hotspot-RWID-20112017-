@@ -64,7 +64,7 @@
 
 				function openAdvert(){
 					if (window.name != 'hotspot_advert'){
-						popup = open('$(link-redirect)', 'hotspot_advert', '');
+						popup = open('$(link-redirect)', 'hotspot_advert', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=620,height=360,left=20,top=20');
 						setTimeout("openOrig()", 1000);
 						return;
 					}
