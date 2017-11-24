@@ -1,12 +1,30 @@
+<!--
+	Re-Design by RizkyWebID
+	Re-Design		: Rizky Arinanda. AR.
+	Re-Design URL	: http://Rizky.Web.ID
+	Template Name	: Hotspot RWID 20112017
+	Template Type	: MikroTik Hotspot Template
+
+	Online Donations
+	BitCoin (BTC)	: 1RizkyK5ZcCyV8pe6fRwEX6c7cRk3APQP
+	BitCoin (BTC)	: 1DonasiM6GpyuBTL8fPWE3RDWoUKBpQKAe
+	BitCoin (BTC)	: 1D85zNjRPRfJy1Er6czF5h6Ma3g1a454rs
+-->
+
 <!DOCTYPE HTML5>
 <html lang="ID">
 	<head>
 		<title>HOTSPOT RWID | Advertisement</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
 
-		<meta name="Re-Design" content="Rizky Arinanda. AR. (https://www.rizky.web.id/)">
-		<meta name="Description" content="HOTSPOT RWID, RizkyWebID, Hotspot, RT-RW.Net"/>
-		<meta name="Viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="Re-Design"		content="Rizky Arinanda. AR. (https://www.rizky.web.id/)">
+		<meta name="Description"	content="HOTSPOT RWID, RizkyWebID, Hotspot, RT-RW.Net"/>
+		<meta name="Viewport"		content="width=device-width, initial-scale=1">
+
+		<meta http-equiv="Content-Type"	content="text/html; charset=utf-8"/>
+		<meta http-equiv="refresh"		content="2; url=$(link-redirect)">
+		<meta http-equiv="pragma"		content="no-cache">
+		<meta http-equiv="expires"		content="-1">
 
 		<script type="application/x-javascript">
 			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
@@ -31,8 +49,31 @@
 				});
 			});
 		</script>
+		<script language="JavaScript">
+			<!--
+				var popup = '';
+
+				function openOrig(){
+					if (window.focus) popup.focus();
+					location.href = unescape('$(link-orig-esc)');
+				}
+
+				function openAd(){
+					location.href = unescape('$(link-redirect-esc)');
+				}
+
+				function openAdvert(){
+					if (window.name != 'hotspot_advert'){
+						popup = open('$(link-redirect)', 'hotspot_advert', '');
+						setTimeout("openOrig()", 1000);
+						return;
+					}
+					setTimeout("openAd()", 1000);
+				}
+			//-->
+		</script>
 	</head>
-	<body>
+	<body onLoad="openAdvert()">
 		<!-- header-top -->
 			<div class="header-top">
 				<div class="container">

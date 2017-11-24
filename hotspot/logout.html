@@ -1,12 +1,29 @@
+<!--
+	Re-Design by RizkyWebID
+	Re-Design		: Rizky Arinanda. AR.
+	Re-Design URL	: http://Rizky.Web.ID
+	Template Name	: Hotspot RWID 20112017
+	Template Type	: MikroTik Hotspot Template
+
+	Online Donations
+	BitCoin (BTC)	: 1RizkyK5ZcCyV8pe6fRwEX6c7cRk3APQP
+	BitCoin (BTC)	: 1DonasiM6GpyuBTL8fPWE3RDWoUKBpQKAe
+	BitCoin (BTC)	: 1D85zNjRPRfJy1Er6czF5h6Ma3g1a454rs
+-->
+
 <!DOCTYPE HTML5>
 <html lang="ID">
 	<head>
 		<title>HOTSPOT RWID | Logout</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
 
-		<meta name="Re-Design" content="Rizky Arinanda. AR. (https://www.rizky.web.id/)">
-		<meta name="Description" content="HOTSPOT RWID, RizkyWebID, Hotspot, RT-RW.Net"/>
-		<meta name="Viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="Re-Design"		content="Rizky Arinanda. AR. (https://www.rizky.web.id/)">
+		<meta name="Description"	content="HOTSPOT RWID, RizkyWebID, Hotspot, RT-RW.Net"/>
+		<meta name="Viewport"		content="width=device-width, initial-scale=1">
+
+		<meta http-equiv="Content-Type"	content="text/html; charset=utf-8"/>
+		<meta http-equiv="pragma"		content="no-cache">
+		<meta http-equiv="expires"		content="-1">
 
 		<script type="application/x-javascript">
 			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
@@ -33,6 +50,17 @@
 		</script>
 	</head>
 	<body>
+		<script language="JavaScript">
+			<!--
+				function openLogin(){
+					if (window.name != 'hotspot_logout') return true;
+					open('$(link-login)', '_blank', '');
+					window.close();
+					return false;
+				}
+			//-->
+		</script>
+
 		<!-- header-top -->
 			<div class="header-top">
 				<div class="container">
@@ -117,11 +145,13 @@
 										<td>:</td>
 										<td align="right">$(uptime)</td>
 									</tr>
+									$(if session-time-left)
 									<tr>
 										<th>Time Left</th>
 										<td>:</td>
 										<td align="right">$(session-time-left)</td>
 									</tr>
+									$(endif)
 									<tr>
 										<th>Status</th>
 										<td>:</td>
@@ -134,7 +164,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<form action="#" method="post">
+							<form action="$(link-login)" name="login" onSubmit="return openLogin()">
 								<div class="tp">
 									<input type="submit" value="M A S U K">
 								</div>

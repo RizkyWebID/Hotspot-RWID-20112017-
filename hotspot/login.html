@@ -1,12 +1,29 @@
+<!--
+	Re-Design by RizkyWebID
+	Re-Design		: Rizky Arinanda. AR.
+	Re-Design URL	: http://Rizky.Web.ID
+	Template Name	: Hotspot RWID 20112017
+	Template Type	: MikroTik Hotspot Template
+
+	Online Donations
+	BitCoin (BTC)	: 1RizkyK5ZcCyV8pe6fRwEX6c7cRk3APQP
+	BitCoin (BTC)	: 1DonasiM6GpyuBTL8fPWE3RDWoUKBpQKAe
+	BitCoin (BTC)	: 1D85zNjRPRfJy1Er6czF5h6Ma3g1a454rs
+-->
+
 <!DOCTYPE HTML5>
 <html lang="ID">
 	<head>
 		<title>HOTSPOT RWID | Masuk</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
 
-		<meta name="Re-Design" content="Rizky Arinanda. AR. (https://www.rizky.web.id/)">
-		<meta name="Description" content="HOTSPOT RWID, RizkyWebID, Hotspot, RT-RW.Net"/>
-		<meta name="Viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="Re-Design"		content="Rizky Arinanda. AR. (https://www.rizky.web.id/)">
+		<meta name="Description"	content="HOTSPOT RWID, RizkyWebID, Hotspot, RT-RW.Net"/>
+		<meta name="Viewport"		content="width=device-width, initial-scale=1">
+
+		<meta http-equiv="Content-Type"	content="text/html; charset=utf-8"/>
+		<meta http-equiv="pragma"		content="no-cache">
+		<meta http-equiv="expires"		content="-1">
 
 		<script type="application/x-javascript">
 			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
@@ -83,16 +100,45 @@
 						<h3>Masuk</h3>
 
 						<div class="login-form">
-							<form action="#" method="post">
-								<input type="text" name="USERNAME" placeholder="USERNAME" onkeyup="this.value = this.value.toUpperCase()">
-								<input type="password" name="PASSWORD" placeholder="PASSWORD">
+							$(if chap-id)
+								<form name="sendin" action="$(link-login-only)" method="post">
+									<input type="hidden" name="username"/>
+									<input type="hidden" name="password"/>
+									<input type="hidden" name="dst" value="$(link-orig)"/>
+									<input type="hidden" name="popup" value="true"/>
+								</form>
+
+								<script type="text/javascript" src="js/mikrotik.js"></script>
+
+								<script type="text/javascript">
+									<!--
+										function doLogin(){
+											document.sendin.username.value = document.login.username.value;
+											document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+											document.sendin.submit();
+											return false;
+										}
+									//-->
+								</script>
+							$(endif)
+							<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+								<input type="hidden"	name="dst"		value="$(link-orig)"/>
+								<input type="hidden"	name="popup"	value="true"/>
+								<input type="text"		name="username"	placeholder="USERNAME" onkeyup="this.value = this.value.toUpperCase()">
+								<input type="password"	name="password"	placeholder="PASSWORD">
 								<div class="tp">
 									<input type="submit" value="M A S U K">
 								</div>
 							</form>
 						</div>
 
-						<p><a href="registration.html">Don't have an account?</a></p>
+						$(if trial == 'yes')
+							<p><a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Don't have an account?</a></p>
+						$(endif)
+
+						$(if error)
+							<p style="color: #FF8080;">" $(error) "</p>
+						$(endif)
 
 						<div class="login-social-grids">
 							<ul>
@@ -161,5 +207,13 @@
 				});
 			</script>
 		<!-- //here ends scrolling icon -->
+
+		<!-- here stars input username -->
+			<script type="text/javascript">
+				<!--
+					document.login.username.focus();
+				//-->
+			</script>
+		<!-- //here ends input username -->
 	</body>	
 </html>
