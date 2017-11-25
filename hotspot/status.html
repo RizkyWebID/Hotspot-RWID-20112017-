@@ -1,14 +1,14 @@
 <!--
 	Re-Design by RizkyWebID
-	Re-Design		: Rizky Arinanda. AR.
-	Re-Design URL	: http://Rizky.Web.ID
-	Template Name	: Hotspot RWID 20112017
-	Template Type	: MikroTik Hotspot Template
+		Re-Design		: Rizky Arinanda. AR.
+		Re-Design URL	: http://Rizky.Web.ID
+		Template Name	: Hotspot RWID 20112017
+		Template Type	: MikroTik Hotspot Template
 
 	Online Donations
-	BitCoin (BTC)	: 1RizkyK5ZcCyV8pe6fRwEX6c7cRk3APQP
-	BitCoin (BTC)	: 1DonasiM6GpyuBTL8fPWE3RDWoUKBpQKAe
-	BitCoin (BTC)	: 1D85zNjRPRfJy1Er6czF5h6Ma3g1a454rs
+		BitCoin (BTC)	: 1RizkyK5ZcCyV8pe6fRwEX6c7cRk3APQP
+		BitCoin (BTC)	: 1DonasiM6GpyuBTL8fPWE3RDWoUKBpQKAe
+		BitCoin (BTC)	: 1D85zNjRPRfJy1Er6czF5h6Ma3g1a454rs
 -->
 
 <!DOCTYPE HTML5>
@@ -54,29 +54,29 @@
 		</script>
 		<script language="JavaScript">
 			<!--
-				$(if advert-pending == 'yes')
-					var popup = '';
+				$(if advert-pending == "yes")
+					var popup = "";
 
 					function focusAdvert(){
 						if (window.focus) popup.focus();
 					}
 
 					function openAdvert(){
-						popup = open('$(link-advert)', 'hotspot_advert', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=620,height=360,left=20,top=20');
+						popup = open("$(link-advert)", "hotspot_advert", "toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=620,height=360,left=20,top=20");
 						setTimeout("focusAdvert()", 1000);
 					}
 				$(endif)
 
 				function openLogout(){
-					if (window.name != 'hotspot_status') return true;
-					open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=620,height=360,left=20,top=20');
+					if (window.name != "hotspot_status") return true;
+					open("$(link-logout)", "hotspot_logout", "toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=620,height=360,left=20,top=20");
 					window.close();
 					return false;
 				}
 			//-->
 		</script>
 	</head>
-	<body $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)>
+	<body $(if advert-pending == "yes") onLoad="openAdvert()" $(endif)>
 		<!-- header-top -->
 			<div class="header-top">
 				<div class="container">
@@ -126,9 +126,9 @@
 					<div class="signin-form profile">
 						<h3>Status</h3>
 
-						$(if login-by == 'trial')
+						$(if login-by == "trial")
 							<p>Welcome Trial User!</p>
-						$(elif login-by != 'mac')
+						$(elif login-by != "mac")
 							<p>Welcome $(username)!</p>
 						$(endif)
 
@@ -186,7 +186,7 @@
 									$(endif)
 								</tbody>
 							</table>
-							$(if login-by-mac != 'yes')
+							$(if login-by-mac != "yes")
 								<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
 									<div class="tp">
 										<input type="submit" value="K E L U A R">
